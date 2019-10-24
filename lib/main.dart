@@ -1,7 +1,3 @@
-// Copyright 2018 The Flutter team. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 import 'package:flutter/cupertino.dart';
@@ -11,19 +7,7 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // final wordPair = WordPair.random();
-    return MaterialApp(title: 'Startup Name Generator', home: RandomWords()
-        // Scaffold(
-        //   appBar: AppBar(
-        //     title: Text('Welcome to Flutter'),
-        //   ),
-        //   body: Center(
-        //     // child: Text('Hello World'),
-        //     // child: Text(wordPair.asPascalCase)
-        //     child: RandomWords(),
-        //   ),
-        // ),
-        );
+    return MaterialApp(title: 'Startup Name Generator', home: RandomWords());
   }
 }
 
@@ -46,7 +30,7 @@ class RandomWordsState extends State<RandomWords> {
     );
   }
 
-Widget _buildRow(WordPair pair) {
+  Widget _buildRow(WordPair pair) {
     return ListTile(
       title: Text(
         pair.asPascalCase,
@@ -54,7 +38,7 @@ Widget _buildRow(WordPair pair) {
       ),
     );
   }
-  
+
   Widget _buildSuggestions() {
     return ListView.builder(
         padding: const EdgeInsets.all(16.0),
